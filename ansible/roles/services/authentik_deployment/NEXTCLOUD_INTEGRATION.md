@@ -38,15 +38,15 @@ Before creating the provider, set up a custom scope mapping to pass **_Nextcloud
 - Navigate to **Applications** > **Providers** and create an **_OAuth2/OpenID Provider_**.
 - Fill out the details:
 
-|                   Field                   | Setting                                                                   |
-| :---------------------------------------: | :------------------------------------------------------------------------ |
-|                 **Name**                  | `Nextcloud - OIDC`                                                        |
-|          **Authorization Flow**           | `default-provider-authorization-explicit-consent (Authorize Application)` |
-|              **Client Type**              | `Confidential`                                                            |
-| **Redirect URIs/Origins (Authorization)** | `https://nextcloud.khangvum.com/apps/user_oidc/code`                      |
-|  **Redirect URIs/Origins (Post Logout)**  | `https://nextcloud.khangvum.com`                                          |
-|             **Subject Mode**              | `Based on the User's UUID`                                                |
-|            **Selected Scopes**            | Include `Nextcloud Profile`                                               |
+  |                   Field                   | Setting                                                                   |
+  | :---------------------------------------: | :------------------------------------------------------------------------ |
+  |                 **Name**                  | `Nextcloud - OIDC`                                                        |
+  |          **Authorization Flow**           | `default-provider-authorization-explicit-consent (Authorize Application)` |
+  |              **Client Type**              | `Confidential`                                                            |
+  | **Redirect URIs/Origins (Authorization)** | `https://nextcloud.khangvum.com/apps/user_oidc/code`                      |
+  |  **Redirect URIs/Origins (Post Logout)**  | `https://nextcloud.khangvum.com`                                          |
+  |             **Subject Mode**              | `Based on the User's UUID`                                                |
+  |            **Selected Scopes**            | Include `Nextcloud Profile`                                               |
 
 > [!IMPORTANT]
 > Copy your **_Client ID_** and **_Client Secret_**, which are needed for Nextcloud configuration later.
@@ -56,11 +56,11 @@ Before creating the provider, set up a custom scope mapping to pass **_Nextcloud
 - Navigate to **Applications** > **Applications** and create a **_New Application_**:
 - Fill out the details:
 
-|     Field      | Setting                          |
-| :------------: | :------------------------------- |
-|    **Name**    | `Nextcloud`                      |
-|  **Provider**  | Select `Nextcloud - OIDC`        |
-| **Launch URL** | `https://nextcloud.khangvum.com` |
+  |     Field      | Setting                          |
+  | :------------: | :------------------------------- |
+  |    **Name**    | `Nextcloud`                      |
+  |  **Provider**  | Select `Nextcloud - OIDC`        |
+  | **Launch URL** | `https://nextcloud.khangvum.com` |
 
 ## 2. Nextcloud Configuration
 
@@ -74,13 +74,13 @@ Before creating the provider, set up a custom scope mapping to pass **_Nextcloud
 - Navigate to **Administration settings** > **OpenID Connect**.
 - Under the **Registered Providers** section, click the **+** button and configure the provider settings:
 
-|         Field          | Value                                                                                     |
-| :--------------------: | :---------------------------------------------------------------------------------------- |
-|     **Identifier**     | `authentik`                                                                               |
-|     **Client ID**      | (Paste the **_Client ID_** from Authentik)                                                |
-|   **Client secret**    | (Paste the **_Client Secret_** from Authentik)                                            |
-| **Discovery endpoint** | `https://authentik.khangvum.com/application/o/nextcloud/.well-known/openid-configuration` |
-|       **Scope**        | `email profile openid nextcloud`                                                          |
+  |         Field          | Value                                                                                     |
+  | :--------------------: | :---------------------------------------------------------------------------------------- |
+  |     **Identifier**     | `authentik`                                                                               |
+  |     **Client ID**      | (Paste the **_Client ID_** from Authentik)                                                |
+  |   **Client secret**    | (Paste the **_Client Secret_** from Authentik)                                            |
+  | **Discovery endpoint** | `https://authentik.khangvum.com/application/o/nextcloud/.well-known/openid-configuration` |
+  |       **Scope**        | `email profile openid nextcloud`                                                          |
 
 ### Attribute Mapping
 
