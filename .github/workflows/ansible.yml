@@ -48,11 +48,13 @@ on:
       - master
     paths:
       - 'ansible/**'
+      - '.github/workflows/ansible.yml'
   pull_request:
     branches:
       - master
     paths:
       - 'ansible/**'
+      - '.github/workflows/ansible.yml'
 
 jobs:
   ansible:
@@ -73,6 +75,7 @@ jobs:
       - name: Connect to Tailscale
         uses: tailscale/github-action@v4
         with:
+          version: latest
           oauth-client-id: ${{ secrets.TAILSCALE_OAUTH_CLIENT_ID }}
           oauth-secret: ${{ secrets.TAILSCALE_OAUTH_CLIENT_SECRET }}
           tags: tag:ci
