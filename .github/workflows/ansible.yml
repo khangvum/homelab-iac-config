@@ -48,11 +48,13 @@ on:
       - master
     paths:
       - 'ansible/**'
+      - '.github/workflows/ansible.yml'
   pull_request:
     branches:
       - master
     paths:
       - 'ansible/**'
+      - '.github/workflows/ansible.yml'
 
 jobs:
   ansible:
