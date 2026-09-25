@@ -34,8 +34,6 @@ A comprehensive guide to **_integrating Authentik OIDC_** with an **_Immich_** p
 
 ## 2. Immich OAuth Configuration
 
-### System Settings
-
 - Log in to the Immich instance as an **_Administrator_**.
 - Navigate to **Administration** > **Settings** > **Authentication Settings**.
 - Locate the **OAuth** section and configure the following parameters:
