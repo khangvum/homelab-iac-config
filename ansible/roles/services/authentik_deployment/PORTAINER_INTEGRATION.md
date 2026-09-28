@@ -1,6 +1,6 @@
 # Portainer-Authentik Integration Guide
 
-A comprehensive guide to **_integrating Authentik OIDC_** with an **_Portainer_** photo backup instance in a homelab environment.
+A comprehensive guide to **_integrating Authentik OIDC_** with an **_Portainer_** backup instance in a homelab environment.
 
 ## 1. Authentik Configuration
 
